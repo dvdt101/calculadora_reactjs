@@ -6,4 +6,3 @@ class Display extends Component {
   }
 }
 export default Display;
-//   return <div className={"display borderBlack"}>{this.p}</div>;

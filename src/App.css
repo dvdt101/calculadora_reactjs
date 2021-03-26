@@ -1,41 +1,57 @@
 .screen {
   display: grid;
   grid-template-rows: 10fr 80fr 10fr;
-  grid-template-columns: 35fr 30fr 35fr;
+  grid-template-columns: 65fr 95fr 40fr;
   height: 100vh;
-}
-.calculator {
-  grid-column: 2;
-  grid-row: 2;
-  border: 1px solid black;
-  border-radius: 5%;
-  padding: 1em;
-  max-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .button {
+  padding: 10px;
+  color: white;
   display: grid;
   place-items: center;
-  width: 3em;
-  height: 3em;
-  border: 1px solid black;
-  margin: 1em;
-  background-color: lightgreen;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-collapse: collapse;
+  background-color: lightgrey;
   cursor: pointer;
 }
-.buttonsContainers {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: grey;
+
+.calculator {
+  margin-top: 10%;
+  height: 100%;
+  width: 60%;
+  overflow: unset;
+  background-color: aquamarine;
 }
+
 .display {
   display: flex;
+  background-color: #3e4c53;
+  color: white;
+  height: 14%;
+  font-size: 40px;
+  padding: 2px;
   justify-content: flex-end;
-  border: 1px solid black;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-collapse: collapse;
+}
+
+.painel {
+}
+
+.NumbersbuttonsContainers {
+  float: left;
+  display: flex;
+
+  margin: 0;
+}
+
+.OperatingbuttonsContainers {
+  display: flex;
+  float: right;
 }
 
 .disabled {
