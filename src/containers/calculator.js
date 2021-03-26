@@ -118,7 +118,7 @@ class Calculator extends Component {
           </div>
           <div>
             <Button
-              display={"-"}
+              display={"–"}
               onClick={() => this.pickOperator(2)}
               kind={"operating"}
             />
@@ -173,13 +173,13 @@ class Calculator extends Component {
           </div>
           <div>
             <Button
-              display={"/"}
+              display={"÷"}
               kind={"operating"}
               onClick={() => this.pickOperator(4)}
             />
             <Button
               kind={"operating"}
-              display={"V2"}
+              display={"√"}
               onClick={() => this.pickOperator(5)}
             />
             <Button
