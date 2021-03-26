@@ -1,29 +1,35 @@
 .screen {
   display: grid;
-  grid-template-rows: 10fr 80fr 10fr;
+  grid-template-rows: 80fr 15fr;
   grid-template-columns: 65fr 95fr 40fr;
   height: 100vh;
 }
 
 .button {
   padding: 10px;
-  color: white;
+  color: black;
   display: grid;
   place-items: center;
   font-size: 30px;
-  width: 50px;
-  height: 50px;
+  width: 76.2px;
+  height: 76px;
   border-collapse: collapse;
-  background-color: lightgrey;
+  background-color: white;
   cursor: pointer;
 }
 
+.operating {
+  background-color: #d3dde5;
+}
+.icos {
+  background-color: #ff7077;
+  height: 47.5%;
+}
 .calculator {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 100%;
   width: 60%;
   overflow: unset;
-  background-color: aquamarine;
 }
 
 .display {
@@ -31,27 +37,19 @@
   background-color: #3e4c53;
   color: white;
   height: 14%;
+  width: 381.4px;
   font-size: 40px;
   padding: 2px;
   justify-content: flex-end;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  border-collapse: collapse;
-}
-
-.painel {
 }
 
 .NumbersbuttonsContainers {
-  float: left;
   display: flex;
-
+  height: 100%;
+  width: 100%;
   margin: 0;
-}
-
-.OperatingbuttonsContainers {
-  display: flex;
-  float: right;
 }
 
 .disabled {

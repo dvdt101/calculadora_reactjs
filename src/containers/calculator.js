@@ -88,113 +88,105 @@ class Calculator extends Component {
     return (
       <div className={"calculator"}>
         <Display value={this.getValue()} />
-        <div className={"painel"}>
-          <div className={"NumbersbuttonsContainers"}>
-            <div>
-              <Button
-                display={"9"}
-                onClick={() => this.putValue(9)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"8"}
-                onClick={() => this.putValue(8)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"7"}
-                onClick={() => this.putValue(7)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"0"}
-                onClick={() => this.putValue(0)}
-                disabled={operator === 3}
-              />
-            </div>
-            <div>
-              <Button
-                display={"6"}
-                onClick={() => this.putValue(6)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"5"}
-                onClick={() => this.putValue(5)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"4"}
-                onClick={() => this.putValue(4)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"00"}
-                onClick={() => this.putValue(0)}
-                disabled={operator === 3}
-              />
-            </div>
-            <div>
-              <Button
-                display={"3"}
-                onClick={() => this.putValue(3)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"2"}
-                onClick={() => this.putValue(2)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"1"}
-                onClick={() => this.putValue(1)}
-                disabled={operator === 3}
-              />
-              <Button
-                display={"."}
-                onClick={() => this.putValue(0)}
-                disabled={operator === 3}
-              />
-            </div>
+        <div className={"NumbersbuttonsContainers"}>
+          <div>
+            <Button
+              display={"+"}
+              onClick={() => this.pickOperator(1)}
+              kind={"operating"}
+            />
+            <Button
+              display={"7"}
+              onClick={() => this.putValue(7)}
+              kind={"number"}
+            />
+            <Button
+              display={"4"}
+              onClick={() => this.putValue(4)}
+              kind={"number"}
+            />
+            <Button
+              display={"1"}
+              onClick={() => this.putValue(1)}
+              kind={"number"}
+            />
+            <Button
+              display={"0"}
+              onClick={() => this.putValue(0)}
+              kind={"number"}
+            />
           </div>
-
-          <div className={"OperatingbuttonsContainers"}>
-            <div>
-              <Button
-                display={"+"}
-                onClick={() => this.pickOperator(1)}
-                disabled={operator !== 1}
-              />
-              <Button
-                display={"-"}
-                onClick={() => this.pickOperator(2)}
-                disabled={operator !== 1}
-              />
-              <Button
-                display={"x"}
-                onClick={() => this.pickOperator(3)}
-                disabled={operator !== 1}
-              />
-              <Button
-                display={"/"}
-                onClick={() => this.pickOperator(4)}
-                disabled={operator !== 1}
-              />
-            </div>
-
-            <div>
-              <Button
-                display={"V2"}
-                onClick={() => this.pickOperator(5)}
-                disabled={operator !== 1}
-              />
-              <Button
-                display={"="}
-                onClick={() => this.execOperation()}
-                disabled={false}
-              />
-              <Button display={"c"} onClick={() => this.clear()} />
-            </div>
+          <div>
+            <Button
+              display={"-"}
+              onClick={() => this.pickOperator(2)}
+              kind={"operating"}
+            />
+            <Button
+              display={"8"}
+              onClick={() => this.putValue(8)}
+              kind={"number"}
+            />
+            <Button
+              display={"5"}
+              onClick={() => this.putValue(5)}
+              kind={"number"}
+            />
+            <Button
+              display={"2"}
+              onClick={() => this.putValue(2)}
+              kind={"number"}
+            />
+            <Button
+              display={"."}
+              onClick={() => this.putValue(".")}
+              kind={"number"}
+            />
+          </div>
+          <div>
+            <Button
+              display={"x"}
+              onClick={() => this.pickOperator(3)}
+              kind={"operating"}
+              disabled={operator !== 1}
+            />
+            <Button
+              display={"9"}
+              onClick={() => this.putValue(9)}
+              kind={"number"}
+            />
+            <Button
+              display={"6"}
+              onClick={() => this.putValue(6)}
+              kind={"number"}
+            />
+            <Button
+              display={"3"}
+              onClick={() => this.putValue(1)}
+              kind={"number"}
+            />
+            <Button
+              display={"c"}
+              onClick={() => this.clear()}
+              kind={"number"}
+            />
+          </div>
+          <div>
+            <Button
+              display={"/"}
+              kind={"operating"}
+              onClick={() => this.pickOperator(4)}
+            />
+            <Button
+              kind={"operating"}
+              display={"V2"}
+              onClick={() => this.pickOperator(5)}
+            />
+            <Button
+              kind={"icos"}
+              display={"="}
+              onClick={() => this.execOperation()}
+            />
           </div>
         </div>
       </div>
