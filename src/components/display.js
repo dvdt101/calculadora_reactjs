@@ -2,7 +2,14 @@ import React, { Component } from "react";
 
 class Display extends Component {
   render() {
-    return <div className={"display"}>{this.props.value}</div>;
+    let cssDisplay;
+    if (this.props.top) {
+      cssDisplay = "topDisplay";
+    } else {
+      cssDisplay = "bottonDisplay";
+    }
+
+    return <div className={cssDisplay}>{this.props.value}</div>;
   }
 }
 export default Display;
